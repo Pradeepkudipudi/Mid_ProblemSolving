@@ -310,3 +310,218 @@ for(i=1;i<=rows;i++){
 
 
 //9
+
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// +1
+// ++2
+// +++3
+// ++++4
+
+
+
+r=5
+for(i=1;i<=r;i++){
+  s=""
+  for(sp=0;sp<i;sp++){
+    s+="+"
+  }
+  
+  for(j=1;j<2;j++){
+    s+= i
+  }
+  console.log(s)
+}
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// +1
+// ++12
+// +++123
+// ++++1234
+
+
+
+
+
+r=5
+for(i=0;i<r;i++){
+  s=""
+  for(sp=1;sp<=i;sp++){
+    s+="+"
+  }
+  
+  for(j=1;j<=i;j++){
+    s+= j 
+  }
+  console.log(s)
+}
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// A 
+// AB
+// ABC
+// ABCD
+
+
+
+r=5
+
+
+for(i=0;i<r;i++){
+  s=""
+  c=65
+
+  
+  for(j=1;j<=i;j++){
+      code = String.fromCharCode(c)
+    s+= code
+    c++
+      
+  }
+    
+  console.log(s)
+
+}
+
+
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 3
+// Output     	: 
+
+//   A
+// A  B
+// A  B  C
+
+// let rs = 3;
+
+// for (let i = 1; i <= rs; i++) {
+//   let s = "";
+//   let c = 65; // ASCII for 'A'
+
+//   // Adding leading spaces
+//   for (let sp = rs - i; sp > 0; sp--) {
+//     s += "  "; // Two spaces for alignment
+//   }
+
+//   // Adding alphabets
+//   for (let j = 0; j < i; j++) {
+//     s += String.fromCharCode(c) + "  ";
+//     c++;
+//   }
+
+//   console.log(s.trim()); // Trim to remove trailing spaces
+// }
+
+//or 
+
+r=3
+
+
+for(i=1;i<=r;i++){
+  s=""
+  c=65
+
+for(sp=r-i;sp>0;sp--){
+  s+= " "+" "
+}
+  
+  for(j=0;j<i;j++){
+      code = String.fromCharCode(c)
+    s+= code +"  "
+    c++
+      
+  }
+    
+  console.log(s)
+
+}
+
+
+
+
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// A1
+// AB12
+// ABC123
+// ABCD1234
+
+r=5
+
+
+for(i=0;i<r;i++){
+  s=""
+  c=65
+
+  
+  for(j=1;j<=i;j++){
+      code = String.fromCharCode(c)
+    s+= code
+    c++
+      
+  }
+  
+    for(k=1;k<=i;k++){
+    s+=k
+  }
+    
+  console.log(s)
+
+}
+
+// Write a program that takes number of rows as input and print below respective pattern.
+
+// Testcase1	:  Enter number of rows: 4
+// Output     	: 
+
+// A
+// ab
+// ABC
+// abcd
+
+r=5
+
+
+for(i=0;i<r;i++){
+  s=""
+  
+
+if(i%2==1){
+    c=65
+  for(j=1;j<=i;j++){
+      code = String.fromCharCode(c)
+    s+= code
+    c++
+      
+  }
+}else{
+    c=97
+  for(j=1;j<=i;j++){
+      code = String.fromCharCode(c)
+    s+= code
+    c++
+      
+  }
+  
+}
+    
+  console.log(s)
+
+}
