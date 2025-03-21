@@ -525,3 +525,149 @@ if(i%2==1){
   console.log(s)
 
 }
+
+
+
+// arrays
+
+
+// Rotate an Array
+
+// Problem: Write a function that rotates an array to the right by a given number of steps.
+// Testcase 1:
+// Input: [1, 2, 3, 4, 5], 2
+// Output: [4, 5, 1, 2, 3]
+
+// arr=[1,2,3,4,5]
+// rote=2
+function Rotate(arr,rote){
+  c=[]
+  for(i=arr.length-rote ;i<arr.length;i++){
+    
+    c.push(arr[i])
+    
+  }
+  for(j=0;j<arr.length-rote;j++){
+    c.push(arr[j])
+  }
+  console.log(c)
+  
+  
+}
+
+
+Rotate( [1, 2, 3, 4, 5], 2)
+
+
+// Intersection of Two Arrays
+
+// Problem: Write a function that returns the common elements between two arrays.
+// Testcase 1:
+// Input: [1, 2, 3], [2, 3, 4]
+// Output: [2, 3]
+
+function Common(arr1,arr2){
+  Commonarr= []
+  for(i of arr1){
+    for(j of arr2){
+      if(i==j){
+        Commonarr.push(i)
+      }
+    }
+  }
+  return Commonarr
+}
+
+console.log(Common([1, 2, 4, 3, 6], [2, 3, 4]))
+
+
+
+
+
+
+
+
+
+// Find the Maximum Product of Two Elements
+
+// Problem: Write a function to find the maximum product of two elements in an array.
+// Testcase 1:
+// Input: [3, 5, -2, 8, 11]
+// Output: 8 * 11 → 88
+
+let Max= (arr)=>{
+  max=[]
+  for( i of arr){
+    for(j of arr){
+      max.push(i*j)
+    }
+  }
+  // max.sort((a,b)=>{return b-a
+     maxvalue=0
+    for( i of max){
+      if(i>maxvalue){
+        maxvalue=i
+      }
+    }
+   
+
+  return maxvalue
+  
+}
+
+console.log(Max([3, 5, -2, 8, 11]))
+
+
+
+
+// Move Zeros to End
+
+// Problem: Write a function that moves all zeros in an array to the end while maintaining the order of other elements.
+// Testcase 1:
+// Input: [0, 1, 0, 3, 12]
+// Output: [1, 3, 12, 0, 0]
+let moveZerosToEnd = (arr) => {
+  let nonZeroArr = [];
+  let zeroArr = [];
+
+
+  for (let i of arr) {
+    if (i !== 0) {
+      nonZeroArr.push(i);
+    } else {
+      zeroArr.push(i);
+    }
+  }
+  nonZeroArr.sort((a,b)=>{return a-b})
+
+
+  return [...nonZeroArr,...zeroArr];
+};
+
+
+console.log(moveZerosToEnd([0, 1, 0, 5,3, 12]));
+
+
+
+
+
+
+// Find Missing Number
+
+// Problem: Given an array of consecutive numbers with one missing, find the missing number.
+// Testcase 1:
+// Input: [1, 2, 4, 5]
+// Output: [3]
+let arr=[112,116 ,120, 124, 125]
+emp=[]
+arr.sort()
+
+for(i=arr[0];i<=arr[arr.length-1];i++){
+  emp.push(i)
+}
+console.log(emp)
+
+
+
+
+
