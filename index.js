@@ -658,16 +658,84 @@ console.log(moveZerosToEnd([0, 1, 0, 5,3, 12]));
 // Testcase 1:
 // Input: [1, 2, 4, 5]
 // Output: [3]
-let arr=[112,116 ,120, 124, 125]
+let ars=[112,116 ,120, 124, 125]
 emp=[]
-arr.sort()
+ars.sort()
 
-for(i=arr[0];i<=arr[arr.length-1];i++){
+for(i=ars[0];i<=ars[ars.length-1];i++){
   emp.push(i)
 }
 console.log(emp)
 
 
 
+
+
+
+// Find the Longest Word
+
+// Problem: Write a function to find the longest word in a string.
+// Testcase 1:
+// Input: "The quick brown fox jumps over the lazy dog"
+// Output: "jumps"
+
+
+
+str= " i am nagasai"
+
+max=""
+  char=0
+for(i=0;i<str.length;i++){
+
+  if( str[i]!==undefined && str[i]!==" " ){
+    char+= str[i]
+  }else{
+    
+    if(char.length> max.length){
+      max = char
+      
+    }
+    char=""
+  }
+}
+
+if (char.length > max.length) {
+  max = char;
+}
+console.log(max)
+
+
+
+// Problem: Write a function to find all permutations of a given string.
+// Testcase 1:
+// Input: "abc"
+// Output: ["abc", "acb", "bac", "bca", "cab", "cba"]
+
+
+str="abc"
+ar=[]
+for(i of str){
+  for( j of str){
+    if(i==j){
+      
+    }else{
+      ar.push(i+j) 
+    }
+  }
+}
+
+let arrr=[]
+
+for(i of str){
+  
+ for(j of ar){
+   if(!j.includes(i)){
+     arrr.push(i+j)
+   }
+ }
+}
+
+
+console.log(arrr)
 
 
