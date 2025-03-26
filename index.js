@@ -739,3 +739,103 @@ for(i of str){
 console.log(arrr)
 
 
+
+
+// Convert Roman Numerals to Integer
+
+// Problem: Write a function to convert a Roman numeral string to an integer.
+// Testcase 1:
+// Input: "MCMXCIV"
+// Output: 1994
+
+const Roman = (str)=>{
+  
+  obj= {
+    "M":1000,
+    "C": 100,
+    "D" : 500,
+    "X" : 10,
+    "I": 1,
+    "V": 5
+  }
+  result=0
+
+  
+  
+  for(i=0;i<str.length;i++){
+    
+   let  current = obj[str[i]]
+  let  next = obj[str[i+1]]
+    
+    if(next>current){
+      result+= next - current
+      i++;
+    }else{
+      result+= current
+    }
+    
+    
+  }
+  return result
+}
+
+
+console.log(Roman("MCMXCIV"))
+
+
+
+
+
+
+
+
+
+// String Compression
+// `
+// Problem: Write a function to perform basic string compression using the counts of repeated characters.
+// Testcase 1:
+// Input: "aabcccccaaa"
+// Output: "a2b1c5a3"
+
+
+
+
+let strr = "aabcccccaaa"
+s=""
+  count=1
+for(i=0;i<strr.length;i++){
+
+  
+  if(strr[i]===strr[i+1]){
+    
+  count++
+  
+    
+  
+  }else{
+    s += strr[i] + count;
+    count = 1;
+  }
+  
+
+}
+  console.log(s)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
