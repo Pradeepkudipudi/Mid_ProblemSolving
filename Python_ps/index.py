@@ -181,3 +181,100 @@ for i in range(len(name)):
 
     
 print(res)
+
+
+
+
+
+
+
+
+
+
+
+
+# FizzBuzaz
+
+# Problem: Write a program that prints the numbers from 1 to 100. For multiples of three, print "Fizz" instead of the number, and for multiples of five, print "Buzz". For numbers that are multiples of both three and five, print "FizzBuzz".
+# Testcase 1:
+
+# Output:
+# 1  
+# 2  
+# Fizz  
+# 4  
+# Buzz  
+# Fizz  
+
+# 7  
+# 8  
+# Fizz  
+# Buzz  
+# 11  
+# Fizz  
+# ... 
+# s=''
+# for i in range(1,100):
+  
+
+#   if i%3==0:
+#     print('Fizz')
+#   elif i%5==0 :
+#     print( 'Buzz')
+#   elif i%2==1 and i%5==0 :
+#     print('FizzBuzz')
+#   else:
+#     print(i)
+  
+
+
+
+
+
+
+
+
+# Sum of Digits
+
+# Problem: Write a function that takes a number and returns the sum of its digits.
+# Testcase 1:
+# Input: 123
+# Output: 6
+
+
+# def my_sum(li):
+#   s=0
+#   for i in range(len(li)):
+#     s+=  li[i]
+    
+#   return s
+    
+# print(my_sum([1,2,3]))
+
+def my_sum(li):
+    return sum(li)
+
+print(my_sum([1,2,3]))
+  
+
+# Check for Armstrong Number
+
+# Problem: Write a function to check if a number is an Armstrong number (e.g., 153 is an Armstrong number because 1^3 + 5^3 + 3^3 = 153).
+# Testcase 1:
+# Input: 1
+
+# Output: true
+
+# Generate Fibonacci Sequence
+
+# Problem: Write a function that generates the first n numbers in the Fibonacci sequence.
+# Testcase 1:
+# Input: 5
+# Output: [0, 1, 1, 2, 3]
+
+# li=  [0, 1, 1, 2, 3]
+
+
+
+
+
