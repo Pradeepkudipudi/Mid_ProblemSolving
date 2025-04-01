@@ -139,3 +139,45 @@ print(mising)
 
 
 
+
+
+
+
+details = {
+  'marks': {
+    "tel":65,
+    'hindi':45,
+    'eng': 93
+  }
+}
+
+s=''
+for i in details :
+  for j in details[i] :
+    s=  sum( details[i].values())
+    
+
+details['total'] = s
+
+print(details)
+
+
+
+name = 'pradeep'
+
+res= ''
+vowels = 'aeiouAEIOU'
+
+
+for i in range(len(name)):
+  code = ord(name[i])
+  if name[i] in vowels :
+        
+    res+= name[i]
+    
+  else:
+    code+=1
+    res+= chr(code)
+
+    
+print(res)
