@@ -827,6 +827,123 @@ for(i=0;i<strr.length;i++){
 
 
 
+// Find the First Duplicate
+
+// Problem: Write a function to return the first duplicate value in an array.
+// Testcase 1:
+// Input: [2, 1, 3, 5, 3, 2]
+// Output: 3
+
+
+function dupli(arr ){
+  emp=[]
+  rep=""
+  for(i of arr){
+    if(!emp.includes(i)){
+      emp.push(i)
+    }else{
+      rep=i
+      break
+      
+      
+    }
+  }
+ 
+ if(rep.length==0){
+   return undefined
+ }else{
+     return rep
+ }
+  
+
+  
+}
+console.log(dupli( [2, 1, 3, 5, 3, 2]))
+
+
+
+// Group Anagrams
+
+// Problem: Write a function to group anagrams from an array of strings.
+// Testcase 1:
+// Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+// Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+
+
+
+function anagram(ana){
+  groups={}
+  
+  for(str of ana){
+    const key = str.split("").sort().join("")
+    
+    if(!groups[key]){
+      groups[key]= []
+    }
+    
+    
+    groups[key].push(str)
+    
+  }
+  
+  return Object.values(groups)
+  
+}
+
+console.log(anagram(["eat", "tea", "tan", "ate", "nat", "bat"]))
+
+//   Convert the given Input Empty String into the given Output
+//     Testcase 1:
+//     Input : [ ]
+//     Output : [[1,2,3][4,5,6][7,8,9]]
+
+function generate3x3Grid(inp) {
+  const result = [];
+
+  for (let i = 0; i < inp.length; i += 3) {
+    const row = inp.slice(i, i + 4);
+    result.push(row);
+  }
+
+  return result;
+}
+
+console.log(generate3x3Grid([1, 2, 3, 4, 5, 6, 7, 8, 9]));
+// Output: [[1,2,3],[4,5,6],[7,8,9]]
+
+
+// Output: [[1,2,3],[4,5,6],[7,8,9]]
+
+
+// Input: [3, 1, 2, 4, 7, 6, 5]
+
+ 
+// You are given an array of integers. Rearrange the array such that:
+// All even numbers appear before all odd numbers.
+// Within the even and odd groups, numbers should maintain their relative order from the original array.
+// The rearrangement must be done in-place (without using extra arrays).
+// Output: [2, 4, 6, 3, 1, 7, 5]
+
+
+arr =[2, 4, 6, 3, 1, 7, 5]
+emp = []
+
+for(i of arr){
+    if(i%2==1){
+  emp.push(i) 
+}  
+}
+for(i of arr){
+
+  if(i%2==0){
+  emp.push(i)
+  }
+
+}
+
+console.log(emp)
+
+
 
 
 
